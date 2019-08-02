@@ -1,0 +1,14 @@
+{% extends "base/base.html" %}
+{% block content %}
+  {% for account in accounts %}
+  <article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="#"><span style="font-size:medium;">Id: </span>{{ account.account_id }}</a>
+      </div>
+      <h2><span style="font-size:medium;">Summoner name: </span>{{ account.name }}</h2>
+      <p class="article-content"><span style="font-size:medium;">Owner: </span><a class="" href="{% url 'profile' %}">{{ account.owner }}</a></p>
+    </div>
+  </article>
+  {% endfor %}
+{% endblock content %}
